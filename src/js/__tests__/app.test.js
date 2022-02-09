@@ -11,7 +11,7 @@ it('levelUp', () => {
 });
 
 it('levelUp Error', () => {
-  function checkError () {
+  function checkError() {
     const result = new Bowman('мечник1', 'Bowman');
     result.health = 0;
     result.levelUp();
@@ -28,7 +28,7 @@ it('damage', () => {
 });
 
 it('damage Error', () => {
-  function checkError () {
+  function checkError() {
     const result = new Bowman('мечник1', 'Bowman');
     result.health = -10;
     result.damage(10);
@@ -45,15 +45,15 @@ it('Character', () => {
 });
 
 it('Character', () => {
-  function checkName () {
-    new Character('м', 'Bowman');
+  function checkName() {
+    return new Character('м', 'Bowman');
   }
   expect(checkName).toThrow();
 });
 
 it('Character', () => {
-  function checkType () {
-    new Character('мечник1', 15);
+  function checkType() {
+    return new Character('мечник1', 15);
   }
   expect(checkType).toThrow();
 });
